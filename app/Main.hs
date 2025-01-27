@@ -1,4 +1,8 @@
 module Main where
 
+import System.Directory (getHomeDirectory)
+
 main :: IO ()
-main = putStrLn "Hello, Haskell!"
+main = do
+        directory <- getHomeDirectory
+        putStrLn directory
